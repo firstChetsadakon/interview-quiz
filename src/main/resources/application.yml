@@ -1,0 +1,9 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /interview-quiz
+
+bot:
+  api-key: b637fd74-3e83-496f-9394-52c87a10de79
+  host: https://apigw1.bot.or.th
+  financial-institutions-holidays-uri: /bot/public/financial-institutions-holidays
