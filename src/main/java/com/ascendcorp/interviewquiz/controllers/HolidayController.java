@@ -5,8 +5,7 @@ import com.ascendcorp.interviewquiz.services.HolidayService;
 import java.text.ParseException;
 import java.util.Collections;
 import java.util.List;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,12 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/holiday")
+@Slf4j
 public class HolidayController {
 
-    @Autowired
-    private final HolidayService holidayService;
-    private final Logger logger = LoggerFactory.getLogger(HolidayController.class);
 
+    private final HolidayService holidayService;
+
+    @Autowired
     public HolidayController(HolidayService holidayService) {
         this.holidayService = holidayService;
     }
@@ -29,24 +29,24 @@ public class HolidayController {
     public List<FinancialInstitutionsHolidaysData> getHoliday(
         @RequestParam(value = "year", required = false) String year
     ) {
-        logger.info("Start getHoliday()");
+        log.info("Start getHoliday()");
         long start = System.nanoTime();
         //TODO Implement method to call service to get holiday in year
-
-        logger.info(
+        List<FinancialInstitutionsHolidaysData> response = holidayService.getHoliday(Integer.valueOf(year));
+        log.info(
             "End getHoliday() [{} ms]",
             (System.nanoTime() - start) / 1_000_000
         );
-        return Collections.emptyList();
+        return response;
     }
 
     @GetMapping("/nearest")
     public FinancialInstitutionsHolidaysData getNearestHoliday() {
-        logger.info("Start getNearestHoliday()");
+        log.info("Start getNearestHoliday()");
         long start = System.nanoTime();
         //TODO Implement method to call service to get nearest holiday in future
 
-        logger.info(
+        log.info(
             "End getNearestHoliday() [{} ms]",
             (System.nanoTime() - start) / 1_000_000
         );
@@ -58,11 +58,11 @@ public class HolidayController {
         @RequestParam(value = "startDate") String startDate,
         @RequestParam(value = "endDate") String endDate
     ) {
-        logger.info("Start getHolidayInRange()");
+        log.info("Start getHolidayInRange()");
         long start = System.nanoTime();
         //TODO Implement method to call service to get holiday in range
 
-        logger.info(
+        log.info(
             "End getHolidayInRange() [{} ms]",
             (System.nanoTime() - start) / 1_000_000
         );
