@@ -1,7 +1,9 @@
 package com.ascendcorp.interviewquiz.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
+@Data
 public class FinancialInstitutionsHolidaysData {
 
     @JsonProperty("HolidayWeekDay")
@@ -22,51 +24,4 @@ public class FinancialInstitutionsHolidaysData {
     @JsonProperty("HolidayDescriptionThai")
     private String holidayDescriptionThai;
 
-    public String getHolidayWeekDay() {
-        return holidayWeekDay;
-    }
-
-    public void setHolidayWeekDay(String holidayWeekDay) {
-        this.holidayWeekDay = holidayWeekDay;
-    }
-
-    public String getHolidayWeekDayThai() {
-        return holidayWeekDayThai;
-    }
-
-    public void setHolidayWeekDayThai(String holidayWeekDayThai) {
-        this.holidayWeekDayThai = holidayWeekDayThai;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getDateThai() {
-        return dateThai;
-    }
-
-    public void setDateThai(String dateThai) {
-        this.dateThai = dateThai;
-    }
-
-    public String getHolidayDescription() {
-        return holidayDescription;
-    }
-
-    public void setHolidayDescription(String holidayDescription) {
-        this.holidayDescription = holidayDescription;
-    }
-
-    public String getHolidayDescriptionThai() {
-        return holidayDescriptionThai;
-    }
-
-    public void setHolidayDescriptionThai(String holidayDescriptionThai) {
-        this.holidayDescriptionThai = holidayDescriptionThai;
-    }
 }
