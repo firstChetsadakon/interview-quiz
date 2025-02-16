@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "025f380a-ba89-41b0-a7d6-3daaf0003b0a",
+		"name": "financial-institutions-holidays-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27831993"
+	},
+	"item": [
+		{
+			"name": "holiday",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/interview-quiz/holiday?year=2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"interview-quiz",
+						"holiday"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2025"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "holiday?year=abcd",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/interview-quiz/holiday?year=abcd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"interview-quiz",
+								"holiday"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "abcd"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 09:51:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCode\": \"ERR_ILLEGAL_ARGUMENT\",\n    \"message\": \"For input string: \\\"abcd\\\"\",\n    \"timestamp\": \"2025-02-16T16:51:59.662153\"\n}"
+				},
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/interview-quiz/holiday?year=2025",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"interview-quiz",
+								"holiday"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2025"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 10:48:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2025-01-01\",\n        \"DateThai\": \"01/01/2568\",\n        \"HolidayDescription\": \"New Year’s Day\",\n        \"HolidayDescriptionThai\": \"วันขึ้นปีใหม่\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2025-02-12\",\n        \"DateThai\": \"12/02/2568\",\n        \"HolidayDescription\": \"Makha Bucha Day\",\n        \"HolidayDescriptionThai\": \"วันมาฆบูชา\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2025-04-07\",\n        \"DateThai\": \"07/04/2568\",\n        \"HolidayDescription\": \"Substitution for Chakri Memorial Day (Sunday 6th April 2025)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราช และวันที่ระลึกมหาจักรีบรมราชวงศ์ (วันอาทิตย์ที่ 6 เมษายน 2568)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2025-04-14\",\n        \"DateThai\": \"14/04/2568\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"วันอังคาร\",\n        \"Date\": \"2025-04-15\",\n        \"DateThai\": \"15/04/2568\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2025-05-01\",\n        \"DateThai\": \"01/05/2568\",\n        \"HolidayDescription\": \"National Labour Day\",\n        \"HolidayDescriptionThai\": \"วันแรงงานแห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2025-05-05\",\n        \"DateThai\": \"05/05/2568\",\n        \"HolidayDescription\": \"Substitution for Coronation Day (Sunday 4th May 2025)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันฉัตรมงคล (วันอาทิตย์ที่ 4 พฤษภาคม 2568)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2025-05-12\",\n        \"DateThai\": \"12/05/2568\",\n        \"HolidayDescription\": \"Substitution for Visakha Bucha Day (Sunday 11th May 2025)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันวิสาขบูชา (วันอาทิตย์ที่ 11 พฤษภาคม 2568)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2025-06-02\",\n        \"DateThai\": \"02/06/2568\",\n        \"HolidayDescription\": \"Additional special holiday (added)\",\n        \"HolidayDescriptionThai\": \"วันหยุดพิเศษ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"วันอังคาร\",\n        \"Date\": \"2025-06-03\",\n        \"DateThai\": \"03/06/2568\",\n        \"HolidayDescription\": \"H.M. Queen Suthida Bajrasudhabimalalakshana’s Birthday\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2025-07-10\",\n        \"DateThai\": \"10/07/2568\",\n        \"HolidayDescription\": \"Asarnha Bucha Day\",\n        \"HolidayDescriptionThai\": \"วันอาสาฬหบูชา\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2025-07-28\",\n        \"DateThai\": \"28/07/2568\",\n        \"HolidayDescription\": \"H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua’s Birthday\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2025-08-11\",\n        \"DateThai\": \"11/08/2568\",\n        \"HolidayDescription\": \"Additional special holiday (added)\",\n        \"HolidayDescriptionThai\": \"วันหยุดพิเศษ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"วันอังคาร\",\n        \"Date\": \"2025-08-12\",\n        \"DateThai\": \"12/08/2568\",\n        \"HolidayDescription\": \"H.M. Queen Sirikit The Queen Mother’s Birthday and Mother’s Day\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง และวันแม่แห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2025-10-13\",\n        \"DateThai\": \"13/10/2568\",\n        \"HolidayDescription\": \"H.M. King Bhumibol Adulyadej The Great Memorial Day\",\n        \"HolidayDescriptionThai\": \"วันนวมินทรมหาราช\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2025-10-23\",\n        \"DateThai\": \"23/10/2568\",\n        \"HolidayDescription\": \"Chulalongkorn Day\",\n        \"HolidayDescriptionThai\": \"วันปิยมหาราช\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2025-12-05\",\n        \"DateThai\": \"05/12/2568\",\n        \"HolidayDescription\": \"H.M. King Bhumibol Adulyadej The Great’s Birthday, National Day and Father’s Day\",\n        \"HolidayDescriptionThai\": \"วันคล้ายวันพระบรมราชสมภพพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร วันชาติ และวันพ่อแห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2025-12-10\",\n        \"DateThai\": \"10/12/2568\",\n        \"HolidayDescription\": \"Constitution Day\",\n        \"HolidayDescriptionThai\": \"วันรัฐธรรมนูญ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2025-12-31\",\n        \"DateThai\": \"31/12/2568\",\n        \"HolidayDescription\": \"New Year’s Eve\",\n        \"HolidayDescriptionThai\": \"วันสิ้นปี\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "holiday/nearest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/interview-quiz/holiday/nearest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"interview-quiz",
+						"holiday",
+						"nearest"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/interview-quiz/holiday/nearest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"interview-quiz",
+								"holiday",
+								"nearest"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 10:49:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"HolidayWeekDay\": \"Monday\",\n    \"HolidayWeekDayThai\": \"วันจันทร์\",\n    \"Date\": \"2025-04-07\",\n    \"DateThai\": \"07/04/2568\",\n    \"HolidayDescription\": \"Substitution for Chakri Memorial Day (Sunday 6th April 2025)\",\n    \"HolidayDescriptionThai\": \"ชดเชยวันพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราช และวันที่ระลึกมหาจักรีบรมราชวงศ์ (วันอาทิตย์ที่ 6 เมษายน 2568)\"\n}"
+				}
+			]
+		},
+		{
+			"name": "holiday/range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/interview-quiz/holiday?year=2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"interview-quiz",
+						"holiday"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2025"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "?startDate=2025-12-31&endDate=2025-01-01",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/interview-quiz/holiday/range?startDate=2025-12-31&endDate=2025-01-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"interview-quiz",
+								"holiday",
+								"range"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2025-12-31"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-01-01"
+								},
+								{
+									"key": null,
+									"value": "2025-12-31",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 10:49:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCode\": \"ERR_ILLEGAL_ARGUMENT\",\n    \"message\": \"startDate (2025-12-31) must not be after endDate (2025-01-01)\",\n    \"timestamp\": \"2025-02-16T17:49:43.117412\"\n}"
+				},
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/interview-quiz/holiday/range?startDate=2020-12-31&endDate=2025-01-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"interview-quiz",
+								"holiday",
+								"range"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2020-12-31"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-01-01"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 10:51:18 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2020-12-31\",\n        \"DateThai\": \"31/12/2563\",\n        \"HolidayDescription\": \"New Year’s Eve \",\n        \"HolidayDescriptionThai\": \"วันสิ้นปี\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2021-01-01\",\n        \"DateThai\": \"01/01/2564\",\n        \"HolidayDescription\": \"New Year’s Day\",\n        \"HolidayDescriptionThai\": \"วันขึ้นปีใหม่\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2021-02-12\",\n        \"DateThai\": \"12/02/2564\",\n        \"HolidayDescription\": \"Additional special holiday (added)\",\n        \"HolidayDescriptionThai\": \"วันหยุดพิเศษ (เพิ่มเติม)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2021-02-26\",\n        \"DateThai\": \"26/02/2564\",\n        \"HolidayDescription\": \"Makha Bucha Day\",\n        \"HolidayDescriptionThai\": \"วันมาฆบูชา\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"วันอังคาร\",\n        \"Date\": \"2021-04-06\",\n        \"DateThai\": \"06/04/2564\",\n        \"HolidayDescription\": \"Chakri Memorial Day\",\n        \"HolidayDescriptionThai\": \"วันพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราช\\r\\nและวันที่ระลึกมหาจักรีบรมราชวงศ์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"วันอังคาร\",\n        \"Date\": \"2021-04-13\",\n        \"DateThai\": \"13/04/2564\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2021-04-14\",\n        \"DateThai\": \"14/04/2564\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2021-04-15\",\n        \"DateThai\": \"15/04/2564\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2021-05-03\",\n        \"DateThai\": \"03/05/2564\",\n        \"HolidayDescription\": \"Substitution for National Labour Day\\r\\n(Saturday 1st May 2021)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันแรงงานแห่งชาติ\\r\\n(วันเสาร์ที่ 1 พฤษภาคม 2564)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"วันอังคาร\",\n        \"Date\": \"2021-05-04\",\n        \"DateThai\": \"04/05/2564\",\n        \"HolidayDescription\": \"Coronation Day\",\n        \"HolidayDescriptionThai\": \"วันฉัตรมงคล\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2021-05-26\",\n        \"DateThai\": \"26/05/2564\",\n        \"HolidayDescription\": \"Wisakha Bucha Day\",\n        \"HolidayDescriptionThai\": \"วันวิสาขบูชา\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2021-06-03\",\n        \"DateThai\": \"03/06/2564\",\n        \"HolidayDescription\": \"H.M. Queen Suthida Bajrasudhabimalalakshana’s Birthday\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสุทิดา\\r\\nพัชรสุธาพิมลลักษณ พระบรมราชินี\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2021-07-26\",\n        \"DateThai\": \"26/07/2564\",\n        \"HolidayDescription\": \"Substitution for Asarnha Bucha Day\\r\\n(Saturday 24th July 2021)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันอาสาฬหบูชา\\r\\n(วันเสาร์ที่ 24 กรกฎาคม 2564)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2021-07-28\",\n        \"DateThai\": \"28/07/2564\",\n        \"HolidayDescription\": \"H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua’s Birthday\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษา\\r\\nพระบาทสมเด็จพระเจ้าอยู่หัว\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2021-08-12\",\n        \"DateThai\": \"12/08/2564\",\n        \"HolidayDescription\": \"H.M. Queen Sirikit The Queen Mother’s Birthday / Mother’s Day\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษา\\r\\nสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ\\r\\nพระบรมราชชนนีพันปีหลวง และวันแม่แห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2021-09-24\",\n        \"DateThai\": \"24/09/2564\",\n        \"HolidayDescription\": \"Additional special holiday (added)\",\n        \"HolidayDescriptionThai\": \"วันหยุดพิเศษ (เพิ่มเติม)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2021-10-13\",\n        \"DateThai\": \"13/10/2564\",\n        \"HolidayDescription\": \"H.M. King Bhumibol Adulyadej The Great Memorial Day\",\n        \"HolidayDescriptionThai\": \"วันคล้ายวันสวรรคต\\r\\nพระบาทสมเด็จพระบรมชนกาธิเบศร\\r\\nมหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2021-10-22\",\n        \"DateThai\": \"22/10/2564\",\n        \"HolidayDescription\": \"Substitution for Chulalongkorn Day\\r\\n(Saturday 23rd October 2021)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันปิยมหาราช\\r\\n(วันเสาร์ที่ 23 ตุลาคม 2564)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2021-12-06\",\n        \"DateThai\": \"06/12/2564\",\n        \"HolidayDescription\": \"Substitution for H.M. King Bhumibol Adulyadej\\r\\nThe Great’s Birthday/ National Day / Father’s Day\\r\\n(Sunday 5th December 2021)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันคล้ายวันพระบรมราชสมภพของ\\r\\nพระบาทสมเด็จพระบรมชนกาธิเบศร\\r\\nมหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร\\r\\nวันชาติ และวันพ่อแห่งชาติ\\r\\n(วันอาทิตย์ที่ 5 ธันวาคม 2564)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2021-12-10\",\n        \"DateThai\": \"10/12/2564\",\n        \"HolidayDescription\": \"Constitution Day\",\n        \"HolidayDescriptionThai\": \"วันรัฐธรรมนูญ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2021-12-31\",\n        \"DateThai\": \"31/12/2564\",\n        \"HolidayDescription\": \"New Year's Eve\",\n        \"HolidayDescriptionThai\": \"วันสิ้นปี\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2022-01-03\",\n        \"DateThai\": \"03/01/2565\",\n        \"HolidayDescription\": \"Substitution for New Year's Day\\r\\n(Saturday 1st January 2022)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันขึ้นปีใหม่\\r\\n(วันเสาร์ที่ 1 มกราคม 2565)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2022-02-16\",\n        \"DateThai\": \"16/02/2565\",\n        \"HolidayDescription\": \"Makha Bucha Day\",\n        \"HolidayDescriptionThai\": \"วันมาฆบูชา\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2022-04-06\",\n        \"DateThai\": \"06/04/2565\",\n        \"HolidayDescription\": \"Chakri Memorial Day\",\n        \"HolidayDescriptionThai\": \"วันพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราช\\r\\nและวันที่ระลึกมหาจักรีบรมราชวงศ์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2022-04-13\",\n        \"DateThai\": \"13/04/2565\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2022-04-14\",\n        \"DateThai\": \"14/04/2565\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2022-04-15\",\n        \"DateThai\": \"15/04/2565\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2022-05-02\",\n        \"DateThai\": \"02/05/2565\",\n        \"HolidayDescription\": \"Substitution for National Labour Day\\r\\n(Sunday 1st May 2022)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันแรงงานแห่งชาติ\\r\\n(วันอาทิตย์ที่ 1 พฤษภาคม 2565)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2022-05-04\",\n        \"DateThai\": \"04/05/2565\",\n        \"HolidayDescription\": \"Coronation Day\",\n        \"HolidayDescriptionThai\": \"วันฉัตรมงคล\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2022-05-16\",\n        \"DateThai\": \"16/05/2565\",\n        \"HolidayDescription\": \"Substitution for Wisakha Bucha Day\\r\\n(Sunday 15th May 2022)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันวิสาขบูชา\\r\\n(วันอาทิตย์ที่ 15 พฤษภาคม 2565)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2022-06-03\",\n        \"DateThai\": \"03/06/2565\",\n        \"HolidayDescription\": \"H.M. Queen Suthida Bajrasudhabimalalakshana’s Birthday\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสุทิดา\\r\\nพัชรสุธาพิมลลักษณ พระบรมราชินี\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2022-07-13\",\n        \"DateThai\": \"13/07/2565\",\n        \"HolidayDescription\": \"Asarnha Bucha Day\",\n        \"HolidayDescriptionThai\": \"วันอาสาฬหบูชา\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2022-07-28\",\n        \"DateThai\": \"28/07/2565\",\n        \"HolidayDescription\": \"H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua’s Birthday\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษา\\r\\nพระบาทสมเด็จพระเจ้าอยู่หัว\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2022-07-29\",\n        \"DateThai\": \"29/07/2565\",\n        \"HolidayDescription\": \"Additional special holiday (added)\",\n        \"HolidayDescriptionThai\": \"วันหยุดพิเศษ (เพิ่มเติม)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2022-08-12\",\n        \"DateThai\": \"12/08/2565\",\n        \"HolidayDescription\": \"H.M. Queen Sirikit The Queen Mother’s Birthday / Mother’s Day\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษา\\r\\nสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ\\r\\nพระบรมราชชนนีพันปีหลวง และวันแม่แห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2022-10-13\",\n        \"DateThai\": \"13/10/2565\",\n        \"HolidayDescription\": \"H.M. King Bhumibol Adulyadej The Great Memorial Day\",\n        \"HolidayDescriptionThai\": \"วันคล้ายวันสวรรคต\\r\\nพระบาทสมเด็จพระบรมชนกาธิเบศร\\r\\nมหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2022-10-14\",\n        \"DateThai\": \"14/10/2565\",\n        \"HolidayDescription\": \"Additional special holiday (added)\",\n        \"HolidayDescriptionThai\": \"วันหยุดพิเศษ (เพิ่มเติม)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2022-10-24\",\n        \"DateThai\": \"24/10/2565\",\n        \"HolidayDescription\": \"Substitution for Chulalongkorn Day\\r\\n(Sunday 23rd October 2022)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันปิยมหาราช\\r\\n(วันอาทิตย์ที่ 23 ตุลาคม 2565)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2022-12-05\",\n        \"DateThai\": \"05/12/2565\",\n        \"HolidayDescription\": \"H.M. King Bhumibol Adulyadej\\r\\nThe Great’s Birthday/ National Day / Father’s Day\",\n        \"HolidayDescriptionThai\": \"วันคล้ายวันพระบรมราชสมภพของ\\r\\nพระบาทสมเด็จพระบรมชนกาธิเบศร\\r\\nมหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร\\r\\nวันชาติ และวันพ่อแห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2022-12-12\",\n        \"DateThai\": \"12/12/2565\",\n        \"HolidayDescription\": \"Substitution for Constitution Day\\r\\n(Saturday 10th December 2022)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันรัฐธรรมนูญ\\r\\n(วันเสาร์ที่ 10 ธันวาคม 2565)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2023-01-02\",\n        \"DateThai\": \"02/01/2566\",\n        \"HolidayDescription\": \"Substitution for New Year's Eve and New Year's Day (Saturday 31st  December 2022 and Saturday 1st January 2023)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันสิ้นปีและวันขึ้นปีใหม่ (วันเสาร์ที่ 31 ธันวาคม 2565 และวันอาทิตย์ที่ 1 มกราคม 2566)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2023-03-06\",\n        \"DateThai\": \"06/03/2566\",\n        \"HolidayDescription\": \"Makha Bucha Day\",\n        \"HolidayDescriptionThai\": \"วันมาฆบูชา\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2023-04-06\",\n        \"DateThai\": \"06/04/2566\",\n        \"HolidayDescription\": \"Chakri Memorial Day\",\n        \"HolidayDescriptionThai\": \"วันพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราชและวันที่ระลึกมหาจักรีบรมราชวงศ์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2023-04-13\",\n        \"DateThai\": \"13/04/2566\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2023-04-14\",\n        \"DateThai\": \"14/04/2566\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2023-05-01\",\n        \"DateThai\": \"01/05/2566\",\n        \"HolidayDescription\": \"National Labour Day\",\n        \"HolidayDescriptionThai\": \"วันแรงงานแห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2023-05-04\",\n        \"DateThai\": \"04/05/2566\",\n        \"HolidayDescription\": \"Coronation Day\",\n        \"HolidayDescriptionThai\": \"วันฉัตรมงคล\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2023-05-05\",\n        \"DateThai\": \"05/05/2566\",\n        \"HolidayDescription\": \"Additional special holiday  (added)\",\n        \"HolidayDescriptionThai\": \"วันหยุดพิเศษ (เพิ่มเติม)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2023-06-05\",\n        \"DateThai\": \"05/06/2566\",\n        \"HolidayDescription\": \"Substitution for  H.M. Queen Suthida Bajrasudhabimalalakshana’s Birthday and Wisakha Bucha Day (Saturday 3rd June 2023)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี และวันวิสาขบูชา (วันเสาร์ที่ 3 มิถุนายน 2566)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2023-07-28\",\n        \"DateThai\": \"28/07/2566\",\n        \"HolidayDescription\": \"H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua’s Birthday\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษา พระบาทสมเด็จพระเจ้าอยู่หัว\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"อังคาร\",\n        \"Date\": \"2023-08-01\",\n        \"DateThai\": \"01/08/2566\",\n        \"HolidayDescription\": \"Asarnha Bucha Day\",\n        \"HolidayDescriptionThai\": \"วันอาสาฬหบูชา\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2023-08-14\",\n        \"DateThai\": \"14/08/2566\",\n        \"HolidayDescription\": \"Substitution for H.M. Queen Sirikit The Queen Mother’s Birthday / Mother’s Day (Saturday 12th August 2023)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันเฉลิมพระชนมพรรษา สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง และวันแม่แห่งชาติ (วันเสาร์ที่ 12 สิงหาคม 2566)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2023-10-13\",\n        \"DateThai\": \"13/10/2566\",\n        \"HolidayDescription\": \"H.M. King Bhumibol Adulyadej The Great Memorial Day\",\n        \"HolidayDescriptionThai\": \"วันคล้ายวันสวรรคต พระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2023-10-23\",\n        \"DateThai\": \"23/10/2566\",\n        \"HolidayDescription\": \"Chulalongkorn Day\",\n        \"HolidayDescriptionThai\": \"วันปิยมหาราช\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"อังคาร\",\n        \"Date\": \"2023-12-05\",\n        \"DateThai\": \"05/12/2566\",\n        \"HolidayDescription\": \"H.M. King Bhumibol Adulyadej The Great’s Birthday/ National Day / Father’s Day\",\n        \"HolidayDescriptionThai\": \"วันคล้ายวันพระบรมราชสมภพ พระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร วันชาติ และวันพ่อแห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2023-12-11\",\n        \"DateThai\": \"11/12/2566\",\n        \"HolidayDescription\": \"Substitution for Constitution Day (Sunday 10th December 2023)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันรัฐธรรมนูญ (วันอาทิตย์ที่ 10 ธันวาคม 2566)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2023-12-29\",\n        \"DateThai\": \"29/12/2566\",\n        \"HolidayDescription\": \"Substitution for New Year’s Eve (Sunday 31st December 2023) (added)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันสิ้นปี (วันอาทิตย์ที่ 31 ธันวาคม 2566) (เพิ่มเติม)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2024-01-01\",\n        \"DateThai\": \"01/01/2567\",\n        \"HolidayDescription\": \"New Year’s Day\",\n        \"HolidayDescriptionThai\": \"วันขึ้นปีใหม่\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2024-02-26\",\n        \"DateThai\": \"26/02/2567\",\n        \"HolidayDescription\": \"Substitution for Makha Bucha Day (Saturday 24th February 2024)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันมาฆบูชา (วันเสาร์ที่ 24 กุมภาพันธ์ 2567)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2024-04-08\",\n        \"DateThai\": \"08/04/2567\",\n        \"HolidayDescription\": \"Substitution for Chakri Memorial Day (Saturday 6th April 2024)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราช และวันที่ระลึกมหาจักรีบรมราชวงศ์ (วันเสาร์ที่ 6 เมษายน 2567)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Friday\",\n        \"HolidayWeekDayThai\": \"วันศุกร์\",\n        \"Date\": \"2024-04-12\",\n        \"DateThai\": \"12/04/2567\",\n        \"HolidayDescription\": \"Additional special holiday (added)\",\n        \"HolidayDescriptionThai\": \"วันหยุดพิเศษ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2024-04-15\",\n        \"DateThai\": \"15/04/2567\",\n        \"HolidayDescription\": \"Songkran Festival\",\n        \"HolidayDescriptionThai\": \"วันสงกรานต์\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"วันอังคาร\",\n        \"Date\": \"2024-04-16\",\n        \"DateThai\": \"16/04/2567\",\n        \"HolidayDescription\": \"Substitution for Songkran Festival (Saturday 13th April 2024 and Sunday 14th April 2024)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันสงกรานต์ (วันเสาร์ที่ 13 เมษายน 2567 และ วันอาทิตย์ที่ 14 เมษายน 2567)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2024-05-01\",\n        \"DateThai\": \"01/05/2567\",\n        \"HolidayDescription\": \"National Labour Day\",\n        \"HolidayDescriptionThai\": \"วันแรงงานแห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2024-05-06\",\n        \"DateThai\": \"06/05/2567\",\n        \"HolidayDescription\": \"Substitution for Coronation Day (Saturday 4th May 2024)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันฉัตรมงคล (วันเสาร์ที่ 4 พฤษภาคม 2567)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2024-05-22\",\n        \"DateThai\": \"22/05/2567\",\n        \"HolidayDescription\": \"Visakha Bucha Day\",\n        \"HolidayDescriptionThai\": \"วันวิสาขบูชา\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2024-06-03\",\n        \"DateThai\": \"03/06/2567\",\n        \"HolidayDescription\": \"H.M. Queen Suthida Bajrasudhabimalalakshana’s Birthday\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2024-07-22\",\n        \"DateThai\": \"22/07/2567\",\n        \"HolidayDescription\": \"Substitution for Asarnha Bucha Day (Saturday 20th July 2024)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันอาสาฬหบูชา (วันเสาร์ที่ 20 กรกฎาคม 2567)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2024-07-29\",\n        \"DateThai\": \"29/07/2567\",\n        \"HolidayDescription\": \"Substitution for H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua’s Birthday (Sunday 28th July 2024)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว (วันอาทิตย์ที่ 28 กรกฎาคม 2567)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2024-08-12\",\n        \"DateThai\": \"12/08/2567\",\n        \"HolidayDescription\": \"H.M. Queen Sirikit The Queen Mother’s Birthday / Mother’s Day\",\n        \"HolidayDescriptionThai\": \"วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง และวันแม่แห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Monday\",\n        \"HolidayWeekDayThai\": \"วันจันทร์\",\n        \"Date\": \"2024-10-14\",\n        \"DateThai\": \"14/10/2567\",\n        \"HolidayDescription\": \"Substitution for H.M. King Bhumibol Adulyadej The Great Memorial Day (Sunday 13th October 2024)\",\n        \"HolidayDescriptionThai\": \"ชดเชยวันนวมินทรมหาราช (วันอาทิตย์ที่ 13 ตุลาคม 2567)\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2024-10-23\",\n        \"DateThai\": \"23/10/2567\",\n        \"HolidayDescription\": \"Chulalongkorn Day\",\n        \"HolidayDescriptionThai\": \"วันปิยมหาราช\"\n    },\n    {\n        \"HolidayWeekDay\": \"Thursday\",\n        \"HolidayWeekDayThai\": \"วันพฤหัสบดี\",\n        \"Date\": \"2024-12-05\",\n        \"DateThai\": \"05/12/2567\",\n        \"HolidayDescription\": \"H.M. King Bhumibol Adulyadej The Great’s Birthday / National Day / Father’s Day\",\n        \"HolidayDescriptionThai\": \"วันคล้ายวันพระบรมราชสมภพพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร วันชาติ และวันพ่อแห่งชาติ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"วันอังคาร\",\n        \"Date\": \"2024-12-10\",\n        \"DateThai\": \"10/12/2567\",\n        \"HolidayDescription\": \"Constitution Day\",\n        \"HolidayDescriptionThai\": \"วันรัฐธรรมนูญ\"\n    },\n    {\n        \"HolidayWeekDay\": \"Tuesday\",\n        \"HolidayWeekDayThai\": \"วันอังคาร\",\n        \"Date\": \"2024-12-31\",\n        \"DateThai\": \"31/12/2567\",\n        \"HolidayDescription\": \"New Year’s Eve\",\n        \"HolidayDescriptionThai\": \"วันสิ้นปี\"\n    },\n    {\n        \"HolidayWeekDay\": \"Wednesday\",\n        \"HolidayWeekDayThai\": \"วันพุธ\",\n        \"Date\": \"2025-01-01\",\n        \"DateThai\": \"01/01/2568\",\n        \"HolidayDescription\": \"New Year’s Day\",\n        \"HolidayDescriptionThai\": \"วันขึ้นปีใหม่\"\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080/interview-quiz",
+			"type": "string"
+		}
+	]
+}
