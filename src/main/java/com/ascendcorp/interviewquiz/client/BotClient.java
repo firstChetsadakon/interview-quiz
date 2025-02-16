@@ -1,8 +1,8 @@
 package com.ascendcorp.interviewquiz.client;
 
+import com.ascendcorp.interviewquiz.exceptions.ExternalApiException;
 import com.ascendcorp.interviewquiz.models.BotResponse;
 import com.ascendcorp.interviewquiz.models.FinancialInstitutionsHolidaysData;
-import com.ascendcorp.interviewquiz.models.FinancialInstitutionsHolidaysResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,13 +26,13 @@ public class BotClient {
     }
 
     public List<FinancialInstitutionsHolidaysData> getFinancialInstitutionsHoliday(int year) {
-        log.info("call getFinancialInstitutionsHoliday: {}", webClient.get());
+        log.info("call getFinancialInstitutionsHoliday: ");
         String path = uri + "?year=" + year;
         BotResponse botResponse = webClient.get()
                 .uri(path)
                 .retrieve().bodyToMono(BotResponse.class)
                 .block();
-        log.info("botResponse: {}", botResponse);
+//        log.info("botResponse: {}", botResponse);
         return botResponse.getResult().getData();
     }
 

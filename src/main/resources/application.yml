@@ -7,3 +7,9 @@ bot:
   api-key: replace_with_actual_api_key
   host: https://apigw1.bot.or.th
   financial-institutions-holidays-uri: /bot/public/financial-institutions-holidays
+spring:
+  cache:
+    type: caffeine
+    cache-names: holidaysByYear
+    caffeine:
+      spec: "maximumSize=1000,expireAfterWrite=10m"
