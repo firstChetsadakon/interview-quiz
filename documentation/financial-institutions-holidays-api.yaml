@@ -1,0 +1,182 @@
+openapi: 3.0.3
+info:
+  title: Financial Institutions Holidays API
+  description: API สำหรับดึงข้อมูลวันหยุดของสถาบันการเงิน
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8080/interview-quiz
+
+paths:
+  /holiday:
+    get:
+      summary: Get holidays by year
+      description: ดึงรายการวันหยุดของปีที่ระบุ
+      parameters:
+        - name: year
+          in: query
+          required: false
+          schema:
+            type: string
+          description: ปีที่ต้องการดึงข้อมูลวันหยุด ถ้าไม่ระบุ จะใช้ปีปัจจุบัน
+      responses:
+        "200":
+          description: สำเร็จ - คืนข้อมูลวันหยุด
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/HolidayData"
+              examples:
+                example1:
+                  summary: ตัวอย่างข้อมูลวันหยุด
+                  value:
+                    - HolidayWeekDay: "Wednesday"
+                      HolidayWeekDayThai: "วันพุธ"
+                      Date: "2025-01-01"
+                      DateThai: "01/01/2568"
+                      HolidayDescription: "New Year’s Day"
+                      HolidayDescriptionThai: "วันขึ้นปีใหม่"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+
+  /holiday/range:
+    get:
+      summary: Get holidays in a date range
+      description: ดึงข้อมูลวันหยุดภายในช่วงวันที่กำหนด
+      parameters:
+        - name: startDate
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+          description: วันที่เริ่มต้น (รูปแบบ yyyy-MM-dd)
+        - name: endDate
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+          description: วันที่สิ้นสุด (รูปแบบ yyyy-MM-dd)
+      responses:
+        "200":
+          description: สำเร็จ - คืนข้อมูลวันหยุดในช่วงที่กำหนด
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/HolidayData"
+              examples:
+                example1:
+                  summary: วันหยุดภายในช่วงวันที่กำหนด
+                  value:
+                    - HolidayWeekDay: "Monday"
+                      HolidayWeekDayThai: "วันจันทร์"
+                      Date: "2025-04-07"
+                      DateThai: "07/04/2568"
+                      HolidayDescription: "Substitution for Chakri Memorial Day (Sunday 6th April 2025)"
+                      HolidayDescriptionThai: "ชดเชยวันพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราช และวันที่ระลึกมหาจักรีบรมราชวงศ์ (วันอาทิตย์ที่ 6 เมษายน 2568)"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+
+  /holiday/nearest:
+    get:
+      summary: Get the nearest holiday
+      description: คืนข้อมูลวันหยุดที่ใกล้ที่สุดจากวันที่ปัจจุบัน
+      responses:
+        "200":
+          description: สำเร็จ - คืนข้อมูลวันหยุดที่ใกล้ที่สุด
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HolidayData"
+              examples:
+                example1:
+                  summary: วันหยุดที่ใกล้ที่สุด
+                  value:
+                    HolidayWeekDay: "Monday"
+                    HolidayWeekDayThai: "วันจันทร์"
+                    Date: "2025-04-07"
+                    DateThai: "07/04/2568"
+                    HolidayDescription: "Substitution for Chakri Memorial Day (Sunday 6th April 2025)"
+                    HolidayDescriptionThai: "ชดเชยวันพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราช และวันที่ระลึกมหาจักรีบรมราชวงศ์ (วันอาทิตย์ที่ 6 เมษายน 2568)"
+
+
+components:
+  schemas:
+    HolidayData:
+      type: object
+      properties:
+        HolidayWeekDay:
+          type: string
+          example: "Wednesday"
+        HolidayWeekDayThai:
+          type: string
+          example: "วันพุธ"
+        Date:
+          type: string
+          format: date
+          example: "2025-01-01"
+        DateThai:
+          type: string
+          example: "01/01/2568"
+        HolidayDescription:
+          type: string
+          example: "New Year’s Day"
+        HolidayDescriptionThai:
+          type: string
+          example: "วันขึ้นปีใหม่"
+
+  responses:
+    BadRequest:
+      description: คำขอไม่ถูกต้อง (เช่น รูปแบบปีผิด)
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errorCode:
+                type: string
+                example: ERR_ILLEGAL_ARGUMENT
+              message:
+                type: string
+                example: "For input string: 'abcd'"
+              timestamp:
+                type: string
+                format: date-time
+          examples:
+            invalidYear:
+              summary: รูปแบบปีไม่ถูกต้อง
+              value:
+                errorCode: "ERR_ILLEGAL_ARGUMENT"
+                message: "For input string: 'abcd'"
+                timestamp: "2025-02-16T16:51:59.662153"
+
+    NotFound:
+      description: ไม่พบข้อมูลวันหยุด
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errorCode:
+                type: string
+                example: ERR_HOLIDAY_NOT_FOUND
+              message:
+                type: string
+                example: "No holiday data found for year 2025"
+              timestamp:
+                type: string
+                format: date-time
+          examples:
+            notFound:
+              summary: ไม่มีข้อมูลวันหยุด
+              value:
+                errorCode: "ERR_HOLIDAY_NOT_FOUND"
+                message: "No holiday data found for year 2025"
+                timestamp: "2025-02-16T17:49:43.117412"
