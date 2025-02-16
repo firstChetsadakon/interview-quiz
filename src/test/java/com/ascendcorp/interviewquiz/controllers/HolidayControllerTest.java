@@ -35,8 +35,6 @@ public class HolidayControllerTest {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    //TODO Implement unit test for HolidayController
-
 
     @Before
     public void setup() {

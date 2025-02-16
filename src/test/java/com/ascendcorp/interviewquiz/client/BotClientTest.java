@@ -49,8 +49,6 @@ public class BotClientTest {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    //TODO Implement unit test for BotClient
-
     @Before
     public void setup() {
         ReflectionTestUtils.setField(botClient, "uri", "/api/financial-institutions-holidays");
